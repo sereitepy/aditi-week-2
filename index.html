@@ -1,45 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mini CRUD App</title>
-  <script src="script.js" type="module">
-    import data from './script.js'
-  </script>
-</head>
-<body>
-  <div>
-    <h1 id="title">Hello</h1>
-    <p id="price"></p>
-    <p id="description"></p>
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini e-commerce</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-black/85 text-white p-10 flex flex-col gap-15">
+    <!-- <div
+      class="flex items-center justify-center flex-col w-60 mx-auto rounded-xl hover:shadow-lg shadow-xl shadow-black/90 hover:scale-103 transition-all duration-300 ease-in-out bg-neutral-700"
+    >
+      <div class="">
+        <img
+          class="rounded-t-xl peer"
+          src="https://lusso-living.com/cdn/shop/files/LSLGROLSNBA_6_1024x1024.jpg?v=1736857824"
+          alt="sleek-modern-leather-sofa"
+        />
+        <div class="p-3 flex flex-col gap-1 peer">
+          <div class="flex justify-between">
+            <h1 id="title" class="flex flex-wrap font-semibold">
+              Sleek Modern Leather Sofa
+            </h1>
+            <p id="price" class="font-bold text-green-600 text-xl">$53</p>
+          </div>
+          <div class="flex justify-end items-center">
+            <p id="category" class="px-2 text-sm bg-white/20 rounded-xl w-fit">
+              furniture
+            </p>
+          </div>
+        </div>
+        <button
+          class="p-2 font-bold hover:font-extrabold hover:bg-neutral-600 w-full items-center justify-center flex bg-neutral-800 rounded-b-xl cursor-pointer active:bg-neutral-800 opacity-0 max-h-0 overflow-hidden peer-hover:opacity-100 peer-hover:max-h-20 transition-all duration-300 delay-300 hover:opacity-100 hover:max-h-20"
+        >
+          Add to cart
+        </button>
+      </div>
+    </div> -->
+
+    <div class="flex items-center justify-center py-10">
+      <input
+        type="text"
+        placeholder="Search a product..."
+        class="px-4 py-1 w-100 rounded-3xl border-2 border-white/30"
+      />
+    </div>
+
+    <!-- Electronics -->
+    <section class="max-w-7xl mx-auto snap-x">
+      <h1 class="px-8 text-2xl font-bold">Electronics</h1>
+      <div
+        id="cards-container-electronics"
+        class="max-w-7xl  flex max-xl:overflow-x-scroll xl:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 p-5 scrollbar-hidden snap-start"
+      >
+        <!-- Cards will be inserted here -->
+      </div>
+    </section>
+
+    <!-- Electronics -->
+    <section class="max-w-7xl mx-auto">
+      <h1 class="px-8 text-2xl font-bold">Women's Clothing'</h1>
+      <div
+        id="cards-container-womens"
+        class="mx-auto flex max-xl:overflow-x-scroll xl:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 p-5"
+      >
+        <!-- Cards will be inserted here -->
+      </div>
+    </section>
+
+    <script src="script.js" type="module"></script>
+  </body>
 </html>
-
-<!-- 
-
-{
-    id: 28,
-    title: 'Sleek Modern Leather Sofa',
-    slug: 'sleek-modern-leather-sofa',
-    price: 53,
-    description: 'Enhance the elegance of your living space with our Sleek Modern Leather Sofa. Designed with a minimalist aesthetic, it features clean lines and a luxurious leather finish. The robust metal legs provide stability and support, while the plush cushions ensure comfort. Perfect for contemporary homes or office waiting areas, this sofa is a statement piece that combines style with practicality.',
-    category: {
-      id: 3,
-      name: 'Furniture',
-      slug: 'furniture',
-      image: 'https://i.imgur.com/Qphac99.jpeg',
-      creationAt: '2025-11-29T01:49:03.000Z',
-      updatedAt: '2025-11-29T01:49:03.000Z'
-    },
-    images: [
-      'https://i.imgur.com/Qphac99.jpeg',
-      'https://i.imgur.com/dJjpEgG.jpeg',
-      'https://i.imgur.com/MxJyADq.jpeg'
-    ],
-    creationAt: '2025-11-29T01:49:03.000Z',
-    updatedAt: '2025-11-29T01:49:03.000Z'
-  },
-  
-  -->
