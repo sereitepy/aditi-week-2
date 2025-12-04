@@ -1,20 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mini CRUD App</title>
-  <script src="script.js" type="module">
-    import data from './script.js'
-  </script>
-</head>
-<body>
-  <div>
-    <h1 id="title">Hello</h1>
-    <p id="price"></p>
-    <p id="description"></p>
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini CRUD App</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-black/90 text-white p-10">
+    <div
+      class="flex items-center justify-center flex-col w-60 mx-auto rounded-xl hover:shadow-lg shadow-xl shadow-black/90 hover:scale-110 transition-all duration-300 ease-in-out bg-neutral-700"
+    >
+      <img
+        class="rounded-t-xl"
+        src="https://lusso-living.com/cdn/shop/files/LSLGROLSNBA_6_1024x1024.jpg?v=1736857824"
+        alt="sleek-modern-leather-sofa"
+      />
+      <div class="p-3 flex flex-col gap-3">
+        <div class="flex justify-between">
+          <h1 id="title" class="flex flex-wrap font-semibold">
+            Sleek Modern Leather Sofa
+          </h1>
+          <p id="price" class="font-bold text-green-600">$53</p>
+        </div>
+        <div class="flex justify-between items-center">
+          <p id="category" class="px-2 text-sm bg-white/20 rounded-xl w-fit">
+            furniture
+          </p>
+          <div class="px-3 py-0.5 text-sm font-bold flex items-center bg-black rounded-2xl w-fit">Purchase</div>
+        </div>
+      </div>
+      <div class="p-2 font-bold bg-neutral-950 w-full flex items-center justify-center hidden hover:flex">
+        Add to cart
+      </div>
+    </div>
+
+    <script src="script.js" type="module"></script>
+  </body>
 </html>
 
 <!-- 
