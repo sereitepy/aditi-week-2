@@ -17,7 +17,7 @@ async function getData() {
 let cart = []
 
 // getData()
-function createCard(product) {
+const createCard = (product) => {
   return `
     <div class="flex items-center justify-center flex-col h-fit mx-auto w-65 rounded-xl hover:shadow-lg shadow-black/50 hover:scale-103 transition-all duration-300 ease-in-out bg-neutral-700 flex-wrap shadow-lg">
       <div class="w-65 flex-wrap">
@@ -55,7 +55,7 @@ function createCard(product) {
   `
 }
 
-function cartCard(product, index) {
+const cartCard = (product, index) => {
   return `
     <div class="relative flex items-center justify-center flex-col h-fit mx-auto w-65 rounded-xl hover:shadow-lg shadow-black/50 hover:scale-103 transition-all duration-300 ease-in-out bg-neutral-700 flex-wrap shadow-lg">
       <div class="w-65 flex-wrap">
@@ -93,7 +93,7 @@ function cartCard(product, index) {
   `
 }
 
-function updateCart() {
+const updateCart = () => {
   const cartContainer = document.getElementById('cards-container-carts')
 
   if (cart.length === 0) {
@@ -109,7 +109,7 @@ function updateCart() {
   }
 }
 
-function removeCart() {
+const removeCart = () => {
   const removeButtons = document.querySelectorAll('.remove-from-cart')
 
   removeButtons.forEach(button => {
@@ -156,7 +156,7 @@ async function loadData() {
   updateCart()
 }
 
-function addToCart() {
+const addToCart = () => {
   const buttons = document.querySelectorAll('.add-to-cart')
 
   buttons.forEach(button => {
