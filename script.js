@@ -83,10 +83,10 @@ function cartCard(product, index) {
           </div>
         </div>
         <button
-              class="remove-from-cart absolute rounded-full -top-2 -right-2 px-2 bg-red-700 hover:bg-red-700 font-semibold cursor-pointer text-lg font-semibold"
+              class="remove-from-cart absolute rounded-full -top-2 -right-2 py-2 px-2.5 bg-red-200 hover:bg-red-700 font-semibold cursor-pointer text-lg font-semibold"
               data-index="${index}"
             >
-              x
+              🗑️
             </button>
       </div>
     </div>
