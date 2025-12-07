@@ -3,10 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <title>Mini e-commerce</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
+  <header
+    class="fixed top-0 p-5 left-0 w-full z-100 bg-black/30 backdrop-blur-sm shadow-md max-w-screen"
+  >
+    <div class="flex items-center justify-between max-w-7xl w-full mx-auto px-7">
+      <p class="text-xl font-bold cursor-pointer max-xl:pl-5"><a href="#">Home</a></p>
+      <p
+        class="px-4 py-1.5 bg-black rounded-2xl text-sm font-bold cursor-pointer hover:bg-black/10 hover:shadow-lg border-2 border-white/30"
+      >
+      <a href="#cart-element">View Carts</a>
+        
+      </p>
+    </div>
+  </header>
   <body class="bg-black/85 text-white p-10 flex flex-col gap-15">
     <!-- <div
       class="flex items-center justify-center flex-col w-60 mx-auto rounded-xl hover:shadow-lg shadow-xl shadow-black/90 hover:scale-103 transition-all duration-300 ease-in-out bg-neutral-700"
@@ -38,7 +52,7 @@
       </div>
     </div> -->
 
-    <div class="flex items-center justify-center py-10">
+    <div class="flex items-center justify-center pt-20">
       <input
         type="text"
         placeholder="Search a product..."
@@ -47,26 +61,38 @@
     </div>
 
     <!-- Electronics -->
-    <section class="max-w-7xl mx-auto snap-x">
+    <section class="max-w-7xl mx-auto snap-x w-full">
       <h1 class="px-8 text-2xl font-bold">Electronics</h1>
       <div
         id="cards-container-electronics"
-        class="max-w-7xl  flex max-xl:overflow-x-scroll xl:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 p-5 scrollbar-hidden snap-start"
+        class="max-w-7xl flex max-xl:overflow-x-scroll xl:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 p-5 scrollbar-hidden snap-start"
       >
         <!-- Cards will be inserted here -->
       </div>
     </section>
 
     <!-- Electronics -->
-    <section class="max-w-7xl mx-auto">
-      <h1 class="px-8 text-2xl font-bold">Women's Clothing'</h1>
+    <section class="max-w-7xl mx-auto w-full">
+      <h1 class="px-8 text-2xl font-bold">Jewelry</h1>
       <div
         id="cards-container-womens"
-        class="mx-auto flex max-xl:overflow-x-scroll xl:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 p-5"
+        class="max-xl:flex max-xl:overflow-x-scroll xl:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 p-5"
       >
         <!-- Cards will be inserted here -->
       </div>
     </section>
+
+    <!-- Cart -->
+    <section class="max-w-7xl mx-auto w-full">
+      <h1 class="px-8 text-2xl font-bold mb-4">Cart</h1>
+      <div
+        id="cards-container-carts"
+        class="max-xl:flex max-xl:overflow-x-scroll xl:grid xl:grid-cols-4 gap-4 md:gap-6 lg:gap-8 px-5 py-5 max-xl:justify-center"
+      >
+        <!-- Cards will be inserted here -->
+      </div>
+    </section>
+    <span  id="cart-element"></span>
 
     <script src="script.js" type="module"></script>
   </body>
